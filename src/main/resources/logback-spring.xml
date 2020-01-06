@@ -1,0 +1,13 @@
+<configuration>
+  <include resource="org/springframework/cloud/gcp/logging/logback-appender.xml" />
+  <include resource="org/springframework/cloud/gcp/logging/logback-json-appender.xml" />
+
+  <logger name="com.example.helloworld">
+    <level value="TRACE" />
+  </logger>
+
+  <root level="INFO">
+    <appender-ref ref="STACKDRIVER" />
+    <appender-ref ref="CONSOLE_JSON" />
+  </root>
+</configuration>
